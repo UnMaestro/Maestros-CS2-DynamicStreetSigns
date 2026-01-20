@@ -16,12 +16,12 @@
   <PropertyGroup>
     <LangVersion>12</LangVersion>
     <IsBelzontCommonsMod>false</IsBelzontCommonsMod>
-    <ModId></ModId>
-    <Version>1.0.0</Version>
+    <ModId>127990</ModId>
+    <Version>1.2.0</Version>
     <GameVersion>1.*</GameVersion>
     <ThumbnailPath>Properties/Thumbnail.png</ThumbnailPath>
-    <DisplayName>Dynamic Street Signs (WE-Module)</DisplayName>
-    <ShortDescription>A WriteEverywhere-Module that adds Dynamic Street Signs.</ShortDescription>
+    <DisplayName>(NA-EU) Dynamic Street Signs (WE-Module)</DisplayName>
+    <ShortDescription>A WriteEverywhere-Module that adds Country neutral Dynamic Street Signs.</ShortDescription>
     <ForumLink>https://forum.paradoxplaza.com/forum/threads/dynamic-street-signs-we-module.1887920/</ForumLink>
     <GitHubLink>https://github.com/UnMaestro/Maestros-CS2-DynamicStreetSigns</GitHubLink>
     <YoutubeLink></YoutubeLink>
@@ -104,7 +104,7 @@
 	</ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lib.Harmony" Version="2.2.2"/>
+    <PackageReference Include="Lib.Harmony" Version="2.2.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -115,6 +115,7 @@
     <Folder Include="Resources\layouts\" />
     <Folder Include="Resources\atlases\" />
     <Folder Include="Resources\objMeshes\" />
+    <Folder Include="Resources\fonts\" />
   </ItemGroup>
 
 
@@ -126,10 +127,12 @@
       <AdditionalFilesToDeployAtlas Include="Resources\atlases\**\*.png" />
       <AdditionalFilesToDeployLayouts Include="Resources\layouts\**\*.welayout.xml" />
       <AdditionalFilesToDeployLayouts Include="Resources\layouts\**\*.wedefault.xml" />
+      <AdditionalFilesToDeployFonts Include="Resources\fonts\**\*.ttf" />
       <AdditionalFilesToDeployMeshes Include="Resources\objMeshes\**\*.obj" />
     </ItemGroup>
     <Copy SourceFiles="@(AdditionalFilesToDeployAtlas)" DestinationFiles="@(AdditionalFilesToDeployAtlas->'$(DeployDir)\atlases\%(RecursiveDir)%(Filename)%(Extension)')" />
     <Copy SourceFiles="@(AdditionalFilesToDeployLayouts)" DestinationFiles="@(AdditionalFilesToDeployLayouts->'$(DeployDir)\layouts\%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(AdditionalFilesToDeployFonts)" DestinationFiles="@(AdditionalFilesToDeployFonts->'$(DeployDir)\fonts\%(RecursiveDir)%(Filename)%(Extension)')" />
     <Copy SourceFiles="@(AdditionalFilesToDeployMeshes)" DestinationFiles="@(AdditionalFilesToDeployMeshes->'$(DeployDir)\objMeshes\%(Filename)%(Extension)')" />
   </Target>
 

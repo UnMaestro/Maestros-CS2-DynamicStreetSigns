@@ -11,7 +11,7 @@
     </transform>
     <imageMesh atlas="DynamicStreetSign">
       <mesh></mesh>
-      <image>spStreetWhite</image>
+      <image>spStreetBrown</image>
     </imageMesh>
     <defaultStyle>
       <color>F7F7F7FF</color>
@@ -42,7 +42,7 @@
         <MaxWidthMeters>0.72</MaxWidthMeters>
       </textMesh>
       <defaultStyle>
-        <color>000000FF</color>
+        <color>FFFFFFFF</color>
         <emissiveColor>FFFFFFFF</emissiveColor>
         <metallic>0.6641072</metallic>
         <smoothness>0.426490873</smoothness>
@@ -68,7 +68,7 @@
       </transform>
       <imageMesh atlas="DynamicStreetSign">
         <mesh></mesh>
-        <image>spStreetWhite</image>
+        <image>spStreetBrown</image>
       </imageMesh>
       <defaultStyle>
         <color>F7F7F7FF</color>
@@ -99,7 +99,7 @@
           <MaxWidthMeters>0.72</MaxWidthMeters>
         </textMesh>
         <defaultStyle>
-          <color>000000FF</color>
+          <color>FFFFFFFF</color>
           <emissiveColor>FFFFFFFF</emissiveColor>
           <metallic>0.6641072</metallic>
           <smoothness>0.426490873</smoothness>
